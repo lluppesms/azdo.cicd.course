@@ -76,6 +76,14 @@ What you can see above is a very simple pipeline that contains only a few pieces
 
 Our complete pipeline is defined in YAML. To learn the basics of YAML, see [Learn YAML in Y Minutes](https://learnxinyminutes.com/docs/yaml/). Please keep in mind that Azure Pipelines does not support all YAML features today. Unsupported features include anchors, complex keys, and sets.
 
+Change the trigger to be none so that it only runs on demand during our labs, and point the build agent pool to our newly created `desktop` pool:
+
+```yml
+trigger: none
+pool:
+  name: default
+```
+
 ---
 
 ## Exercise 1.2: Run your first pipeline
