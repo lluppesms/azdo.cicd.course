@@ -102,6 +102,12 @@ You can also select if you want to write your change into the main branch or if 
 > To learn more about branches, goto [docs.microsoft.com](https://docs.microsoft.com/azure/devops/repos/get-started/key-concepts-repos?view=azure-devops#branch). 
 -->
 
+You may notice that your job is stuck queueing, which is probably because it is waiting for permission to use the new agent pool. You might see this message (but you might not see it until you refresh the page).  Either way, click on the Job, then you should see a prompt asking for permissions:
+![Pipeline Output](img/062-first-run-01.png)
+
+Authorize the pool and you should be ready to go
+![Pipeline Output](img/064-first-run-02.png)
+
 The pipeline will now start and after a few seconds the output should look like this:
 
 ![Pipeline Output](img/060_pipeline_output.png)
