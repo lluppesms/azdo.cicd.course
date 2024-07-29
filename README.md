@@ -80,7 +80,7 @@ This workshop will cover a series of labs, in which you will learn to create eff
   * [Working with triggers and branches](/Labs/lab4/lab4.md#4-1-working-with-triggers-and-branches)
   * [Working with triggers and path](/Labs/lab4/lab4.md#42-working-with-triggers-and-path)
   * [Scheduled Triggers](labs/lab4/lab4.md#43-scheduled-trigger)
-  * [Scheduled Triggers](labs/lab4/lab4.md#44-pull-request-triggers)
+  * [Pull Request Triggers](labs/lab4/lab4.md#44-pull-request-triggers)
 
 </details>
 
