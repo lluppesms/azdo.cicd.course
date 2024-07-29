@@ -4,21 +4,21 @@ This document will show you how to create a self-hosted Azure Devops Build Runne
 
 ## Steps to create a Desktop Runner
 
-1. Find your Computer Name.
+<!-- 1. Find your Computer Name. -->
 1. Create a PAT Token in Azure DevOps with Agent Pool read/write permissions.
 1. Create an Agent Pool to be linked to your desktop.
 1. Install the Agent Software
 1. Run a job to test this
 
----
+<!-- ---
 
 ### 1. Find your Computer Name
 
 - Open a PowerShell command prompt as administrator.  Determine your machine name by running the command `hostname`. (HostName.exe is an executable file available on your computer drive, which should be located in the C:\Windows\System32 directory)
-
+ -->
 ---
 
-### 2. Create a PAT Token in Azure DevOps with Agent Pool read/write permissions
+### 1. Create a PAT Token in Azure DevOps with Agent Pool read/write permissions
 
 - Go to User Settings -> Personal Access Token -> then click on the New Token button
   ![Create a PAT Token](./images/PAT-Token-01.png)
@@ -33,12 +33,12 @@ This document will show you how to create a self-hosted Azure Devops Build Runne
 
 ---
 
-### 3. Create an Agent Pool to be linked to your desktop
+### 2. Create an Agent Pool to be linked to your desktop
   
 - Go to Azure DevOps -> Organization Settings -> Pipelines: Agent Pools -> and click the Add Pool button
 ![Create a pool 1](./images/Agent-Pool-01.png)
 
-- Select Pool type of `Self-Hosted`, name the pool the same as your machine name showed by the `hostname` command above, and uncheck `Auto-provision this agent pool in all projects`
+- Select Pool type of `Self-Hosted`, name the pool `desktop`, and uncheck `Auto-provision this agent pool in all projects`
 ![Create a pool 2](./images/Agent-Pool-02.png)
 
 - Click `Create` and you should see your new pool
@@ -75,7 +75,8 @@ This document will show you how to create a self-hosted Azure Devops Build Runne
   
   ![Configure the Software](./images/New-Agent-04.png)
 
-  - If you chose to only run on demand, start the server up now using the `.\run.cmd` command.  If you chose to run as a service, the service should already be running.
+  - For this lab, you can enter `Y` and it will run this agent software as a server in the background.  This is recommended for a normal build agent VM, but not necessary for this class.
+  - If you enter `N` for the final prompt, you will have to run the program on demand. Start the server up now using the `.\run.cmd` command.  
 
 ---
 
@@ -95,10 +96,14 @@ This document will show you how to create a self-hosted Azure Devops Build Runne
 
 ### Success!
 
-That's it!  You now have a self-hosted Azure DevOps Build Runner running on your desktop! You won't have to wait in a queue behind anyone else, and you can run your builds whenever you want!
+That's it!  You now have a self-hosted Azure DevOps Build Runner running on your desktop! You won't have to wait in a queue behind anyone else, and you can run your builds whenever you want by specifying `pool: > name: > desktop`!
 
 ---
 
 ## Reference
 
 [Self-hosted Windows agents](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/windows-agent?view=azure-devops)
+
+---
+
+[Begin First Lab](/Labs/lab1/lab1.md) | [VS Code Install](/Labs/lab0/Visual-Studio-Code.md) | [Table of Contents](/README.md)

@@ -2,20 +2,24 @@
 
 In Lab 1 we are starting with an introduction into Pipelines-as-Code with Azure DevOps by building a first, basic Pipeline using the Azure DevOps Portal.
 
-> Goto Azure DevOps, select your Organization and click on your previously created Project. If you have not created an Organization and a Project in Azure DevOps, please start with the preparation tasks in our [BCreate an Azure DevOps Project](../lab0/Create-Azdo-Project.md) guide.
+> Goto Azure DevOps, select your Organization and click on your previously created Project. If you have not created an Organization and a Project in Azure DevOps, please start with the preparation tasks in our [Create an Azure DevOps Project](../lab0/Create-Azdo-Project.md) guide.
+
+> If you have not created a Build Agent yet, you will need to install a Build Agent on your VM or Local Machine.  Please follow the instructions in the [Create a Custom Build Agent](/Labs/Build-Agents/desktop-runner/README.md) guide.
 
 Exercises:
 
-* [1.1 Create a YAML-Pipeline via GUI](#11-create-a-yaml-pipeline-via-gui)
-* [1.2 Run your first pipeline](#12-run-your-first-pipeline)
-* [1.3 Analyze the output](#13-analyze-the-output)
-* [1.4 Use the Assistant to Add Tasks](#14-use-the-assistant-to-add-tasks)
-* [1.5 Extend your Pipeline with Runtime Variables](#15-extend-your-pipeline-with-runtime-variables)
-* [1.6 View the pipeline in your repository](#16-view-the-pipeline-in-your-repository)
+* [0.1 Create an Azure DevOps Project](/Labs/lab0/Create-Azdo-Project.md)
+* [0.2 Create a Custom Build Agent](/Labs/Build-Agents/desktop-runner/README.md)
+* [1.1 Create a YAML-Pipeline via GUI](#exercise-11-create-a-yaml-pipeline-via-gui)
+* [1.2 Run your first pipeline](#exercise-12-run-your-first-pipeline)
+* [1.3 Analyze the output](#exercise-13-analyze-the-output)
+* [1.4 Use the Assistant to Add Tasks](#exercise-14-use-the-assistant-to-add-tasks)
+* [1.5 Extend your Pipeline with Runtime Variables](#exercise-15-extend-your-pipeline-with-runtime-variables)
+* [1.6 View the pipeline in your repository](#exercise-16-view-the-pipeline-in-your-repository)
 
 ---
 
-## 1.1 Create a YAML-Pipeline via GUI
+## Exercise 1.1: Create a YAML-Pipeline via GUI
 
 ### Import our Repository from GitHub
 
@@ -36,8 +40,8 @@ Before we can start building our first pipeline, we need a Repository in Azure D
     **Settings:**
 
     * Repository type: Git
-    * Clone URL: `https://github.com/lluppesms/cicd.course.import.git`
-    * Name: cicd.course
+    * Clone URL: `https://github.com/lluppesms/azdo.cicd.course.git`
+    * Name: azdo.cicd.course
 
 1. And click on "Import".
 
@@ -74,7 +78,7 @@ Our complete pipeline is defined in YAML. To learn the basics of YAML, see [Lear
 
 ---
 
-## 1.2 Run your first pipeline
+## Exercise 1.2: Run your first pipeline
 
 Now that we have created our very first "Starter pipeline"
 
@@ -106,7 +110,7 @@ This is the summary of a specific pipeline run. You can come back at any time to
 
 ---
 
-## 1.3 Analyze the output
+## Exercise 1.3: Analyze the output
 
 The previously created pipeline was very basic. It does not contain much more than a one-line script that prints out "Hello World" and a multi-line script that prints out two lines with very basic echo commands.
 
@@ -149,7 +153,7 @@ Let us now have a deeper look into the output of your pipeline.
 
 ---
 
-## 1.4 Use the Assistant to Add Tasks
+## Exercise 1.4: Use the Assistant to Add Tasks
 
 Now that we have a better understanding of where to find what, we are going to extend our pipeline a bit.
 
@@ -196,7 +200,7 @@ Now that we have a better understanding of where to find what, we are going to e
 
 ---
 
-## 1.5 Extend your Pipeline with Runtime Variables
+## Exercise 1.5: Extend your Pipeline with Runtime Variables
 
 In our next step, we now want to make our pipeline a bit more dynamic and flexible, to achieve this we start working with runtime variables instead of using hardcoded values.
 
@@ -244,7 +248,7 @@ There are several ways to store and call variables. We are starting with a very 
 
 ---
 
-## 1.6 View the pipeline in your repository
+## Exercise 1.6: View the pipeline in your repository
 
 In all our previous steps we have always modified our pipeline in the "Pipelines" > "Pipelines" section using the Pipeline Editor within our browser, but that is not the only way. One of the benefits of using a YAML-based pipeline is that it is stored within an Azure Repo.
 
@@ -263,4 +267,4 @@ Let us look at our Pipeline in our Azure Repo:
 
 This completes Lab 1.
 
-[Next Lab](../lab2/lab2.md) | [Previous Lab](../lab0/Create-Azdo-Project.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab2/lab2.md) | [Previous Lab](../lab0/Create-Azdo-Project.md) | [Table of Contents](/README.md)

@@ -6,15 +6,15 @@ In case you have not finished [Lab 1](../lab1/lab1.md), please go back and finis
 
 Exercises:
 
-* [2.1 Separating Tasks into Jobs](#21-separating-tasks-into-jobs)
-* [2.2 Adding Dependencies between Jobs](#22-adding-dependencies-between-jobs)
-* [2.3 Splitting the Pipeline into Stages](#23-splitting-the-pipeline-into-stages)
-* [2.4 Adding Dependencies between Stages](#24-adding-dependencies-between-stages)
-* [2.5 Approvals](#25-approvals)
+* [2.1 Separating Tasks into Jobs](#exercise-21-separating-tasks-into-jobs)
+* [2.2 Adding Dependencies between Jobs](#exercise-22-adding-dependencies-between-jobs)
+* [2.3 Splitting the Pipeline into Stages](#exercise-23-splitting-the-pipeline-into-stages)
+* [2.4 Adding Dependencies between Stages](#exercise-24-adding-dependencies-between-stages)
+* [2.5 Approvals](#exercise-25-approvals)
 
 ---
 
-## 2.1 Separating Tasks into Jobs
+## Exercise 2.1: Separating Tasks into Jobs
 
 At the end of [Lab 1](../lab1/lab1.md), our pipeline had three steps. All of them were executed in a single job. But what is a job?
 
@@ -120,7 +120,7 @@ Before we now proceed with the next task, let us add a dependency to make sure t
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 2.2 Adding Dependencies between Jobs
+## Exercise 2.2: Adding Dependencies between Jobs
 
 Let us now go back to our pipeline and add a dependency:
 
@@ -151,7 +151,7 @@ Now you will see that part1 will be executed first and part2 will start after pa
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 2.3 Splitting the Pipeline into Stages
+## Exercise 2.3: Splitting the Pipeline into Stages
 
 Now that we had a quick intro into jobs we'll now continue with stages.
 
@@ -246,7 +246,7 @@ In our next task we're going to add dependencies to our stages.
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 2.4 Adding Dependencies between Stages
+## Exercise 2.4: Adding Dependencies between Stages
 
 In our previous task we have mentioned that stages will by default be executed in the order they are defined in the YML file, but there are more ways to control their behavior. In this task we are going to add dependencies to our stages.
 
@@ -343,7 +343,7 @@ You can also see the jobs to stage correlation including time take for each job 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 2.5 Approvals
+## Exercise 2.5: Approvals
 
 There are several scenarios where an additional approval is needed before a deployment into a specific stage or environment can be started. In this task we'll extend our pipeline to require a manual approval before stage 5 will be executed.
 
@@ -418,4 +418,4 @@ After finishing all previous stages, you should see that stage5 is now in "Waiti
 
 This completes Lab 2.
 
-[Next Lab](../lab3/lab3.md) | [Previous Lab](../lab1/lab1.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab3/lab3.md) | [Previous Lab](../lab1/lab1.md) | [Table of Contents](/README.md)

@@ -11,15 +11,15 @@ The short answer is YAML-based or pipelines in general can quickly get very long
 
 Exercises:
 
-* [3.1 Load Steps from Templates](#31-load-steps-from-templates)
-* [3.2 Reusing Templates in Different Stages](#32-reusing-templates-in-different-stages)
-* [3.3 Conditions](#33-conditions)
-* [3.4 Skipping Stages](#34-skipping-stages)
+* [3.1 Load Steps from Templates](#exercise-31-load-steps-from-templates)
+* [3.2 Reusing Templates in Different Stages](#exercise-32-reusing-templates-in-different-stages)
+* [3.3 Conditions](#exercise-33-conditions)
+* [3.4 Skipping Stages](#exercise-34-skipping-stages)
 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 3.1 Load Steps from Templates
+## Exercise 3.1: Load Steps from Templates
 
 Let us start with a basic example. We want to extend a new pipeline, like the one we created in [Lab 1](../lab1/lab1.md) and [Lab 2](../lab2/lab2.md), with its **steps** stored in a **template**.  This is one of the most important concepts to main as it will enable you to create repeatable and reusable patterns that can be used across multiple pipelines.
 
@@ -113,7 +113,7 @@ Besides the output itself you'll see here that there is no difference between pi
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 3.2 Reusing Templates in Different Stages
+## Exercise 3.2: Reusing Templates in Different Stages
 
 In the next task we are now going to build a slightly more advanced pipeline with multiple stages using the same template.
 
@@ -188,7 +188,7 @@ The pipeline should now start to run and you will see two stages (Build Stage Li
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 3.3 Conditions
+## Exercise 3.3: Conditions
 
 What we saw in the previous task is, that it might be sometimes required to not run all steps within a pipeline or its templates in every stage. Sometimes we need more logic and flexibility.
 
@@ -275,7 +275,7 @@ In the job details you'll now see that our stage that previously failed is now n
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 3.4 Skipping Stages
+## Exercise 3.4: Skipping Stages
 
 Sometimes it might be required to run only a subset of all stages within a pipeline. To achieve this, it's not needed to modify the pipeline itself. As part of the manual pipeline execution you can specify which stages should be executed.
 
@@ -321,4 +321,4 @@ The pipeline job details will now show us that the previously unchecked pipeline
 
 This completes Lab 3.
 
-[Next Lab](../lab4/lab4.md) | [Previous Lab](../lab2/lab2.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab4/lab4.md) | [Previous Lab](../lab2/lab2.md) | [Table of Contents](/README.md)

@@ -4,13 +4,13 @@ In this lab we are going to learn how to deploy to multiple environments using s
 
 Exercises:
 
-* [6.1 Creating AzDO Environments](#61-creating-azdo-environments)
-* [6.2 Deploying to Multiple Environments with Dependencies](#62-deploying-to-multiple-environments-with-dependencies)
+* [6.1 Creating AzDO Environments](#exercise-61-creating-azdo-environments)
+* [6.2 Deploying to Multiple Environments with Dependencies](#exercise-62-deploying-to-multiple-environments-with-dependencies)
 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 6.1 Creating AzDO Environments
+## Exercise 6.1: Creating AzDO Environments
 
 For multi-stage deployments (i.e. DEV/QA/PROD), a DevOps Environment should be set up for each stage that that is being published. On that Environment definition, the rules that are needed can set up, such as specific approvers that are needed to publish to that environment.
 
@@ -53,7 +53,7 @@ Go ahead and create a DEV/QA/PROD environment for your pipelines and put yoursel
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 6.2 Deploying to Multiple Environments with Dependencies
+## Exercise 6.2: Deploying to Multiple Environments with Dependencies
 
 In this exercise, we will build a full pipeline that does a scan/build/deploy to multiple environments with dependencies between them.
 
@@ -220,4 +220,4 @@ Once they approve the deployment, it will continue on to the PROD environment, w
 
 This completes Lab 6.
 
-[Next Lab](../lab7/lab7.md) | [Previous Lab](../lab5/lab5.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab7/lab7.md) | [Previous Lab](../lab5/lab5.md) | [Table of Contents](/README.md)

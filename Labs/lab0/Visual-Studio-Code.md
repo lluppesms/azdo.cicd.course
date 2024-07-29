@@ -51,3 +51,7 @@ To verify your VS Code Bicep Extension:
 
 - Open the VS Code Command Pallette with Ctrl+Shift-P or F1 (on Windows)
 - Type `Bicep:` and you should see a list of Bicep commands
+
+---
+
+[Begin First Lab](/Labs/lab1/lab1.md) | [Create an Azure DevOps Project](/Labs/lab0/Create-Azdo-Project.md) | [Create a Custom Build Agent](/Labs/Build-Agents/desktop-runner/README.md) | [Table of Contents](/README.md)

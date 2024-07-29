@@ -8,15 +8,15 @@ Lets have a look at how we would work with triggers.
 
 Exercises:
 
-* [4.1 Triggers and Branches](#41-working-with-triggers-and-branches)
-* [4.2 Triggers and Paths](#42-working-with-triggers-and-paths)
-* [4.3 Scheduled Triggers](#43-scheduled-triggers)
-* [4.4 Pull Request Triggers](#44-pull-request-triggers)
+* [4.1 Triggers and Branches](#exercise-41-working-with-triggers-and-branches)
+* [4.2 Triggers and Paths](#exercise-42-working-with-triggers-and-paths)
+* [4.3 Scheduled Triggers](#exercise-43-scheduled-triggers)
+* [4.4 Pull Request Triggers](#exercise-44-pull-request-triggers)
 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 4.1 Working with Triggers and Branches
+## Exercise 4.1: Working with Triggers and Branches
 
 > **Scenario**  
 > I would like to trigger my pipeline when a commit is made to a certain branch.
@@ -128,7 +128,7 @@ Notice how only one of the pipelines gets triggered based on our inclusion and e
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 4.2 Working with Triggers and Paths
+## Exercise 4.2: Working with Triggers and Paths
 
 > **Scenario**  
 > I would like to trigger my pipeline only when a new commit happens in the path “Repository/Web/*”.
@@ -194,7 +194,7 @@ First lets modify the YAML pipeline.
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 4.3 Scheduled Triggers
+## Exercise 4.3: Scheduled Triggers
 
 > **Scenario**  
 > I would like to trigger a pipeline on a recurring basis to scan my code.
@@ -278,7 +278,7 @@ If you want to actually see the pipeline run, you can click on the `Run pipeline
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 4.4 Pull Request Triggers
+## Exercise 4.4: Pull Request Triggers
 
 > **Scenario**  
 > I would like to trigger my pipeline to do a scan and a build whenever a pull request is created.

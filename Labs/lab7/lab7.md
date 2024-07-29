@@ -4,12 +4,12 @@ In this lab we are going to learn how to create a central repository where you c
 
 Exercises:
 
-* [7.1 Creating a Template Repository](#71-creating-a-template-repository)
+* [7.1 Creating a Template Repository](#exercise-71-creating-a-template-repository)
 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 7.1 Creating a Template Repository
+## Exercise 7.1: Creating a Template Repository
 
 In this lab we will demonstrate how to create a central repository where you can have a library of shared YML templates that other projects can use. This is a common practice to ensure that all projects are using the same build and release definitions.  To do this, we will import an existing repository that contains some shared templates.
 
@@ -100,4 +100,4 @@ This is a great way to create consistent repeatable maintainable pipelines that 
 
 This completes Lab 7.
 
-[Next Lab](../lab8/lab8.md) | [Previous Lab](../lab6/lab6.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab8/lab8.md) | [Previous Lab](../lab6/lab6.md) | [Table of Contents](/README.md)

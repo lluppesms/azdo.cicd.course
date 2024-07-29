@@ -4,19 +4,19 @@ In this lab we are going to have more fun with variables and parameters.
 
 Exercises:
 
-* [5.1 Using Parameters](#51-using-parameters)
-* [5.2 Local Variables](#52-local-variables)
-* [5.3 Variable Template Files](#53-variable-template-files)
-* [5.4 Predefined Variables](#54-predefined-variables)
-* [5.5 Creating Variables in Code](#55-creating-variables-in-code)
-* [5.6 Using Variable Groups](#56-using-variable-groups)
-* [5.7 Loading Values from Key Vault](#57-loading-values-from-key-vault)
-* [5.8 Verbose Logs](#58-verbose-logs)
+* [5.1 Using Parameters](#exercise-51-using-parameters)
+* [5.2 Local Variables](#exercise-52-local-variables)
+* [5.3 Variable Template Files](#exercise-53-variable-template-files)
+* [5.4 Predefined Variables](#exercise-54-predefined-variables)
+* [5.5 Creating Variables in Code](#exercise-55-creating-variables-in-code)
+* [5.6 Using Variable Groups](#exercise-56-using-variable-groups)
+* [5.7 Loading Values from Key Vault](#exercise-57-loading-values-from-key-vault)
+* [5.8 Verbose Logs](#exercise-58-verbose-logs)
 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.1 Using Parameters
+## Exercise 5.1: Using Parameters
 
 Input parameters are a way to provide values to your templates at runtime. You can use parameters to specify values that are not known until the time the template is deployed. Parameters make your templates more flexible and reusable.
 
@@ -91,7 +91,7 @@ With these tools, you can prompt users to provide information and make choices a
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.2 Local Variables
+## Exercise 5.2: Local Variables
 
 You can also create local variables in your pipeline, which are a combination of predefined variables and user-defined values. Local variables are defined in the `variables` section of the pipeline and can be used throughout the pipeline.
 
@@ -124,7 +124,7 @@ Note that this `tree -L 4` is a Linux command will show the first 4 levels of th
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.3 Variable Template Files
+## Exercise 5.3: Variable Template Files
 
 Templates can also be stored in a separate file and referenced in the pipeline. This is useful when you have a task like a build template that you want to reuse, but the file and folder names might change from project to project.
 
@@ -195,7 +195,7 @@ If you were using templates to do a build, you could use these values to build t
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.4 Predefined Variables
+## Exercise 5.4: Predefined Variables
 
 We've already used one of the [predefined variables](https://learn.microsoft.com/en-us/azure/devops/pipelines/build/variables) above to point to the source directory.  There are many others you can use - take a few minutes to look at the list and see if there are any that would be useful in your pipelines.
 
@@ -212,7 +212,7 @@ Go ahead an add this at the top of one of your pipelines and run how the output 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.5 Creating Variables in Code
+## Exercise 5.5: Creating Variables in Code
 
 You can also create variables in your pipeline code and pass them from step to step using the **task.setvariable** command.  You can also use the bash command to show ALL of the defined variables.  In the following example, we create a variable called `runDateTime` and then use it to create a JSON file with build information, and then used the `cat` command to display the contents of the file.
 
@@ -270,7 +270,7 @@ Sample Output showing the BuildInfo file contents:
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.6 Using Variable Groups
+## Exercise 5.6: Using Variable Groups
 
 Variable groups are a way to store values in Azure DevOps that you might want to pass into a YML pipeline or make available across multiple pipelines. You can share and use variable groups in multiple pipelines in the same project. To learn more, visit [https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups)
 
@@ -331,7 +331,7 @@ Sample Output:
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.7 Loading Values from Key Vault
+## Exercise 5.7: Loading Values from Key Vault
 
 There are multiple ways to use secrets in your pipeline.  The best way is to use Azure Key Vault to store your secrets and then load them at runtime.  This is the most secure way to store secrets, as they are encrypted at rest and in transit.  And there are many ways to load secrets from Key Vault, including using the Azure DevOps UI, the Azure CLI, or the Azure DevOps REST API.
 
@@ -354,7 +354,7 @@ We won't actually run this lab as it would involve having to create a Key Vault 
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 5.8 Verbose Logs
+## Exercise 5.8: Verbose Logs
 
 To assist with troubleshooting, you can configure your logs to be more verbose.  To configure verbose logs for a single run, you can start a new build by choosing Run pipeline and selecting Enable system diagnostics, Run.
 
@@ -377,4 +377,4 @@ Go ahead and try this with one of our pipelines and explore the additional outpu
 
 This completes Lab 5.
 
-[Next Lab](../lab6/lab6.md) | [Previous Lab](../lab4/lab4.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab6/lab6.md) | [Previous Lab](../lab4/lab4.md) | [Table of Contents](/README.md)

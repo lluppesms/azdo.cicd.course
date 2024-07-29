@@ -4,7 +4,14 @@ In this lab we are going to implement a build pipeline that creates versioned ar
 
 > You can publish and consume many different types of packages and artifacts with Azure Pipelines. Your continuous integration/continuous deployment (CI/CD) pipeline can publish specific package types to their respective package repositories (NuGet, npm, Python, and so on). Or you can use build artifacts and pipeline artifacts to help store build outputs and intermediate files between build steps. You can then add onto, build, test, or even deploy those artifacts. Goto [docs.microsoft.com](https://docs.microsoft.com/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops) to learn more.
 
-## 8.1 Build pipelines and artifacts
+Exercises:
+
+* [8.1 Build Pipelines and Artifacts](#exercise-81-build-pipelines-and-artifacts)
+* [8.2: Working with Build Artifacts](#exercise-82-working-with-build-artifacts)
+
+---
+
+## Exercise 8.1: Build Pipelines and Artifacts
 
 Let us start with a build pipeline that creates and publishes build artifacts for us.
 
@@ -61,7 +68,7 @@ We need this `definitionId` to reference to our build pipeline as part of our ne
 <!-- ------------------------------------------------------------------------------------------ -->
 ---
 
-## 8.2 Working with build artifacts
+## Exercise 8.2: Working with Build Artifacts
 
 In our previous task we have created a build pipeline that has copied a subset of files from a repository and published them as build artifacts.
 
@@ -112,4 +119,4 @@ This separation can be useful in many ways.
 
 This completes Lab 8.
 
-No Next Lab | [Previous Lab](../lab7/lab7.md) | [Table of Contents](../../README.md)
+No Next Lab | [Previous Lab](../lab7/lab7.md) | [Table of Contents](/README.md)
