@@ -22,7 +22,7 @@ At the end of [Lab 1](../lab1/lab1.md), our pipeline had three steps. All of the
 > You can organize your pipeline into jobs. Every pipeline has at least one job. A job is a series of steps that run sequentially as a unit. In other words, a job is the smallest unit of work that can be scheduled to run.  
 > See [docs.microsoft.com](https://docs.microsoft.com/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml) for more information.
 
-In our previous lab we have created a pipeline using the wizard. The wizard creates a pipeline with a single job. Like this:
+In our previous lab we have created a pipeline using the wizard. The wizard creates a pipeline with a single job, like this:
 
 ```yml
 pool:
@@ -43,7 +43,8 @@ trigger: none
 jobs:
 - job: part1
   pool:
-    vmImage: 'ubuntu-latest'
+  name: default                # if using custom build agent
+  # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
   steps:
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
@@ -55,7 +56,8 @@ jobs:
 
 - job: part2
   pool:
-    vmImage: 'ubuntu-latest'
+  name: default                # if using custom build agent
+  # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
   steps:
   - task: Bash@3
     inputs:
@@ -187,13 +189,15 @@ stages:
   jobs:
   - job: stage1part1
     pool:
-      vmImage: 'ubuntu-latest'
+      name: default                # if using custom build agent
+      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
     steps:
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
   - job: stage1part2
     pool:
-      vmImage: 'ubuntu-latest'
+      name: default                # if using custom build agent
+      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
       steps:
       - script: |
           echo Add other tasks to build, test, and deploy your project.
@@ -204,7 +208,8 @@ stages:
   jobs:
   - job: stage2part1
     pool:
-      vmImage: 'ubuntu-latest'
+      name: default                # if using custom build agent
+      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
     steps:
     - task: Bash@3
       inputs:

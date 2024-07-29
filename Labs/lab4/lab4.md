@@ -59,7 +59,8 @@ First lets create a couple of branches to work with.
         - team2/*
 
     pool:
-      vmImage: 'ubuntu-latest'
+      name: default                # if using custom build agent
+      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
 
     steps:
     - script: echo Hello, world!

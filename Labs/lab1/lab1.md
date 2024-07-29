@@ -2,7 +2,7 @@
 
 In Lab 1 we are starting with an introduction into Pipelines-as-Code with Azure DevOps by building a first, basic Pipeline using the Azure DevOps Portal.
 
-> Goto Azure DevOps, select your Organization and click on your previously created Project. If you have not created an Organization and a Project in Azure DevOps, please start with the preparation tasks in our [Before You Start](../lab0/before-you-start.md) guide.
+> Goto Azure DevOps, select your Organization and click on your previously created Project. If you have not created an Organization and a Project in Azure DevOps, please start with the preparation tasks in our [BCreate an Azure DevOps Project](../lab0/Create-Azdo-Project.md) guide.
 
 Exercises:
 
@@ -263,4 +263,4 @@ Let us look at our Pipeline in our Azure Repo:
 
 This completes Lab 1.
 
-[Next Lab](../lab2/lab2.md) | [Previous Lab](../lab0/before-you-start.md) | [Table of Contents](../../README.md)
+[Next Lab](../lab2/lab2.md) | [Previous Lab](../lab0/Create-Azdo-Project.md) | [Table of Contents](../../README.md)
