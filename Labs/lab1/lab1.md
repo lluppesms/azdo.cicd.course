@@ -81,7 +81,7 @@ Change the trigger to be none so that it only runs on demand during our labs, an
 ```yml
 trigger: none
 pool:
-  name: default
+  name: desktop
 ```
 
 ---
@@ -186,8 +186,7 @@ Now that we have a better understanding of where to find what, we are going to e
 
     ![Tasks - Search for Bash](img/120_tasks_search_for_bash.png)
 
-1. Click on "Bash"
-   * Select Type "Inline"
+1. Click on "Command Line"
    * Modify the "Script" section with a new comment
 
     ![Bash Task](img/130_bash_task_greetings.png)
