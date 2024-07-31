@@ -53,8 +53,7 @@ trigger:
 - none
 
 pool:
-  vmImage: ubuntu-latest
-
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
 stages:
   - template: templates/scan-code-template.yml@template.library

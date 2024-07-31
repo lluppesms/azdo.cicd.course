@@ -59,8 +59,7 @@ First lets create a couple of branches to work with.
         - team2/*
 
     pool:
-      name: default                # if using custom build agent
-      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+      name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
     steps:
     - script: echo Hello, world!
@@ -222,7 +221,7 @@ schedules:
     include:
     - main
 pool:
-  vmImage: ubuntu-latest
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 stages:
 - stage: ScanApplication
   jobs:
@@ -302,7 +301,7 @@ Replace the code provided with the following:
 trigger:
  - pr
 pool:
-  vmImage: ubuntu-latest
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
 stages:
 - stage: ScanApplication

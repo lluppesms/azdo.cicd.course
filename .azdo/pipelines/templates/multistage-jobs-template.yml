@@ -6,5 +6,20 @@ jobs:
 - job: ${{ parameters.name }}
   pool: ${{ parameters.pool }}
   steps:
-  - script: echo "Job ${{ parameters.name }} running on ${{ parameters.pool.vmImage }}"
+  - script: echo "Job ${{ parameters.name }} running on ${{ parameters.pool.vmImage }} on OS $(Agent.OS)"
+  - script: |
+      echo Emulating docker run vanessa/cowsay run cowthink...
+      echo "     ____________________________________ "
+      echo "    ( It's a lovely day for some cheese. )"
+      echo "     ------------------------------------ "
+      echo "           \   ^__^                       "
+      echo "            \  (oo)\_______               "
+      echo "               (__)\       )\/\           "
+      echo "                   ||----w |              "
+      echo "                   ||     ||              "
+    displayName: cowthink
+    enabled: true
+    #condition: ne(variables['Agent.OS'], 'Linux')
+
   - script: docker run vanessa/cowsay run cowthink
+    #ccondition: eq(variables['Agent.OS'], 'Linux')

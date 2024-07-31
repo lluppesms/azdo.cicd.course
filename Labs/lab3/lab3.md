@@ -35,8 +35,6 @@ Let us start..
 
 This will now create new new `Starter pipeline` in our repository.
 
-![New Starter Pipeline](img/010_new_starter_pipeline.png)
-
 Let us give our new pipeline a name that is a bit better than the default azure-pipelines-1-yml.
 
 * Click on the filename
@@ -47,13 +45,15 @@ Let us use `starter-pipeline-with-template.yml`.
 
 ![Renamed Starter Pipeline](img/030_renamed_starter_pipeline.png)
 
-Now that we have created a new pipeline and renamed it successfully, let us now reference to a template that contains our additional steps/tasks.
+Now that we have created a new pipeline and renamed the file successfully, let us reference a template that contains our additional steps/tasks.
 
 To achieve this we can now add the following line to the end of our pipeline:
 
 ```yml
-- template: /.azdo/pipelines/templates/cowsay-template.yml
+- template: /.azdo/pipelines/templates/cowsay-emulated-template.yml
 ```
+
+> Note: in this example we are using the "emulated" cowsay template because Docker is not supported in the hosted lab VMs so therefore it is not available on the self-hosted build agent. You can use the real cowsay-template.yml if you are running a build agent that has access to Docker.
 
 After adding this line to the end of our new pipeline:
 
@@ -129,7 +129,7 @@ This will create a new `Starter pipeline` in our repository. Replace the code wi
 trigger: none
 
 pool:
-  vmImage: 'ubuntu-22.04'
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
 stages:
 - stage: linux
@@ -154,7 +154,7 @@ Extend the 'linux' stage with the following code:
     parameters:
       name: 'Linux'
       pool:
-        vmImage: 'ubuntu-22.04'
+        name: desktop   # -or- vmImage: 'ubuntu-22.04' # if MS-hosted agent
 ```
 
 And the 'windows' stage with this:
@@ -165,7 +165,7 @@ And the 'windows' stage with this:
     parameters:
       name: 'Windows'
       pool:
-        vmImage: 'vs2017-win2016'
+        name: desktop   # -or- vmImage: 'vs2017-win2016' # if MS-hosted agent
 ```
 
 Your pipeline should now look like this:
@@ -245,13 +245,13 @@ We now want to modify the following task in our template:
 
 This is the command that failed in our first run. We now want this task only to run in the linux stage. Not in the windows stage.
 
-To achieve this we're going to add a condition (and a display name for the task to make it easier to identify it).
+To achieve this we're going to add a condition (and a display name for the task to make it easier to identify it). We will use one of the predefined variables that tell us what Operating System the agent is running on.
 
 ```yml
   - script: |
       docker run vanessa/cowsay run cowthink
     displayName: 'Docker run command'
-    condition: eq(variables['System.StageName'], 'linux')
+    condition: eq(variables['Agent.OS'], 'Linux')
 ```
 
 > If you're looking for a specific builtin or predefined variable, please have a look on the list of [predefined variables](https://docs.microsoft.com/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml#pipeline-variables) on docs.microsoft.com.
@@ -265,8 +265,6 @@ To achieve this we're going to add a condition (and a display name for the task 
 * Click on `Run pipeline`
 * Make sure that the correct branch (3.2) is selected
 * Click on **Build Stage Windows**
-
-Note! There are chances that your job is still queued, during this time keep calm :)
 
 In the job details you'll now see that our stage that previously failed is now not executed as part of the windows stage anymore. Our condition works.
 

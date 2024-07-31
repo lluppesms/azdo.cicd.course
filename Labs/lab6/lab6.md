@@ -73,7 +73,7 @@ trigger:
  - none
 
 pool:
-  vmImage: ubuntu-latest
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
 variables:
   - template: /.azdo/pipelines/vars/bicep-locations.yml

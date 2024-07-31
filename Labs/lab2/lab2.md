@@ -25,10 +25,12 @@ At the end of [Lab 1](../lab1/lab1.md), our pipeline had three steps. All of the
 In our previous lab we have created a pipeline using the wizard. The wizard creates a pipeline with a single job, like this:
 
 ```yml
+trigger: 
+  none
 pool:
-  vmImage: 'ubuntu-latest'
+  name: desktop
 steps:
-- bash: echo "Hello world"
+- script: echo Hello world
 ```
 
 This example shows a single job, using Ubuntu 22.04 (Microsoft-hosted agent), containing a single task "bash". We now want to split our previously created pipeline into two jobs.
@@ -43,29 +45,26 @@ trigger: none
 jobs:
 - job: part1
   pool:
-  name: default                # if using custom build agent
-  # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+    name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
   steps:
   - script: echo Hello, world!
-    displayName: 'Run a one-line script'
+    displayName: Run a one-line script
 
   - script: |
       echo Add other tasks to build, test, and deploy your project.
       echo See https://aka.ms/yaml
-    displayName: 'Run a multi-line script'
+    displayName: Run a multi-line script
 
 - job: part2
   pool:
-  name: default                # if using custom build agent
-  # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+    name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
   steps:
-  - task: Bash@3
+  - task: CmdLine@2
+    displayName: Run a multi-line command script
     inputs:
-      targetType: 'inline'
       script: |
-        # Write your commands here
-        echo 'Greetings friends!'
-        echo 'Variable: $(variable1)'
+        echo Greetings friends!
+        echo Variable: $(variable1)
 ```
 
 * Click on `Save`
@@ -189,35 +188,31 @@ stages:
   jobs:
   - job: stage1part1
     pool:
-      name: default                # if using custom build agent
-      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+      name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
     steps:
     - script: echo Hello, world!
-      displayName: 'Run a one-line script'
+      displayName: Run a one-line script
   - job: stage1part2
     pool:
-      name: default                # if using custom build agent
-      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
-      steps:
+      name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
+    steps:
       - script: |
           echo Add other tasks to build, test, and deploy your project.
           echo See https://aka.ms/yaml
-        displayName: 'Run a multi-line script'
+        displayName: Run a multi-line script
 
 - stage: stage2
   jobs:
   - job: stage2part1
     pool:
-      name: default                # if using custom build agent
-      # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+      name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
     steps:
-    - task: Bash@3
+    - task: CmdLine@2
+      displayName: Run a multi-line command script
       inputs:
-        targetType: 'inline'
         script: |
-          # Write your commands here
-          echo 'Greetings from Seattle!'
-          echo 'Variable: $(variable1)'
+          echo Greetings friends!
+          echo Variable: $(variable1)
 ```
 
 * Click `Save`, default to  `Commit directly to the main branch`, and click `Save`

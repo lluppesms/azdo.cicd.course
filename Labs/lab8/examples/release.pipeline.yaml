@@ -3,8 +3,7 @@ name: attdata-deploy-infrastructure # Pipeline Name
 trigger: none # No CI trigger
 
 pool:
-  name: default                # if using custom build agent
-  # vmImage: 'ubuntu-latest'   # if using Microsoft-hosted agents
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 
 variables:
   buildPipelineDefinitionId: ''

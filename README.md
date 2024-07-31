@@ -55,10 +55,10 @@ This workshop will cover a series of labs, in which you will learn to create eff
   <summary>Lab 2 - Tasks, Jobs, Stages and Dependencies</summary>
   
 * [Lab 2 - Tasks, Jobs, Stages and Dependencies](/Labs/lab2/lab2.md)
-  * [Separating Tasks into different Jobs](/Labs/lab2/lab2.md#exercise-21-separating-tasks-into-different-jobs)
-  * [Adding dependencies between Jobs](/Labs/lab2/lab2.md#exercise-22-adding-dependencies-between-jobs)
-  * [Splitting our pipeline into Stages](/Labs/lab2/lab2.md#exercise-23-splitting-our-pipeline-into-stages)
-  * [Dependencies between Stages](/Labs/lab2/lab2.md#exercise-24-adding-dependencies-between-jobs-and-stages)
+  * [Separating tasks into different jobs](/Labs/lab2/lab2.md#exercise-21-separating-tasks-into-different-jobs)
+  * [Adding dependencies between jobs](/Labs/lab2/lab2.md#exercise-22-adding-dependencies-between-jobs)
+  * [Splitting our pipeline into stages](/Labs/lab2/lab2.md#exercise-23-splitting-our-pipeline-into-stages)
+  * [Dependencies between stages](/Labs/lab2/lab2.md#exercise-24-adding-dependencies-between-jobs-and-stages)
   * [Approvals](/Labs/lab2/lab2.md#exercise-25-approvals)
 
 </details>
@@ -69,7 +69,7 @@ This workshop will cover a series of labs, in which you will learn to create eff
 * [Lab 3 - Working with Templates](labs/lab3/lab3.md)
   * [Load steps from templates](/Labs/lab3/lab3.md#exercise-31-load-steps-from-templates)
   * [Reusing stages with templates](/Labs/lab3/lab3.md#exercise-32-reusing-stages-with-templates)
-  * [Conditions](/Labs/lab3/lab3.md#exercise-33-conditions)
+  * [Conditional Execution](/Labs/lab3/lab3.md#exercise-33-conditions)
   * [Skipping stages](labs/lab3/lab3.md#exercise-34-skipping-stages)
 
 </details>
@@ -79,8 +79,8 @@ This workshop will cover a series of labs, in which you will learn to create eff
   
 * [Lab 4 - Triggers](/Labs/lab4/lab4.md)
   * [Working with triggers and branches](/Labs/lab4/lab4.md#exercise-4-1-working-with-triggers-and-branches)
-  * [Working with triggers and path](/Labs/lab4/lab4.md#exercise-42-working-with-triggers-and-path)
-  * [Scheduled Triggers](labs/lab4/lab4.md#exercise-43-scheduled-trigger)
+  * [Working with triggers and paths](/Labs/lab4/lab4.md#exercise-42-working-with-triggers-and-path)
+  * [Schedule Triggers](labs/lab4/lab4.md#exercise-43-scheduled-trigger)
   * [Pull Request Triggers](labs/lab4/lab4.md#exercise-44-pull-request-triggers)
 
 </details>
@@ -90,7 +90,7 @@ This workshop will cover a series of labs, in which you will learn to create eff
 
 * [Lab 5 - More Variables and Parameters](/Labs/lab5/lab5.md)
   * [5.1 Using Parameters](/Labs/lab5/lab5.md#exercise-51-using-parameters)
-  * [5.2 Local Variables](/Labs/lab5/lab5.md#exercise-52-local-variables)
+  * [5.2 Using Local Variables](/Labs/lab5/lab5.md#exercise-52-local-variables)
   * [5.3 Variable Template Files](/Labs/lab5/lab5.md#exercise-53-variable-template-files)
   * [5.4 Predefined Variables](/Labs/lab5/lab5.md#exercise-54-predefined-variables)
   * [5.5 Creating Variables in Code](/Labs/lab5/lab5.md#exercise-55-creating-variables-in-code)
@@ -121,11 +121,11 @@ This workshop will cover a series of labs, in which you will learn to create eff
   <summary>Lab 8 - Splitting CI and CD</summary>
 
 * [Lab 8 - Splitting CI and CD](/Labs/lab8/lab8.md)
-  * [Build pipelines and artifacts](labs/lab8/lab8.md#exercise-81-build-pipelines-and-artifacts)
-  * [Working with build artifacts](labs/lab8/lab8.md#exercise-82-working-with-build-artifacts)
+  * [Creating a Build pipeline and saving the artifacts](labs/lab8/lab8.md#exercise-81-build-pipelines-and-artifacts)
+  * [Creating a Release Pipeline using a pre-built artifact](labs/lab8/lab8.md#exercise-82-working-with-build-artifacts)
 
 </details>
 
 ## Origins
 
-This workshop is loosely based on [https://github.com/heoelri/adopac](a repository) that was initially created by `Rathish Ravikumar <rathishr@microsoft.com>` and `Heyko Oelrichs <heoelri@microsoft.com>` for an internal training and was then updated by `Lyle Luppes <lyleluppes@microsoft.com>` to add more modules and content.
+This workshop is loosely based on [a lab](https://github.com/heoelri/adopac) that was initially created by `Rathish Ravikumar` and `Heyko Oelrichs` of Microsoft for an internal training event, and was then updated by `Lyle Luppes` to add more modules and content.

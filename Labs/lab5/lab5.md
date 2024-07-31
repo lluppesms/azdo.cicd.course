@@ -103,7 +103,7 @@ Create a new pipeline (or you can keep reusing an adding to your previous one...
 trigger:
 - none
 pool:
-  vmImage: ubuntu-latest
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 variables:
   - name: templatePath
     value: '$(Build.SourcesDirectory)/.azdo/pipelines/templates'
@@ -165,7 +165,7 @@ Then replace the contents of the pipeline with this code that references your va
 trigger:
 - none
 pool:
-  vmImage: ubuntu-latest
+  name: desktop   # using custom build agent - or - vmImage: 'ubuntu-latest'  # if using Microsoft-hosted agent
 variables:
   - template: /.azdo/pipelines/vars/project-locations.yml
   - name: projectFullName
